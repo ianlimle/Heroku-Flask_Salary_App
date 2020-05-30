@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html><!--From https://codepen.io/frytyler/pen/EGdtg--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href="index_files/css_003.css" rel="stylesheet" type="text/css">
+<link href="index_files/css_004.css" rel="stylesheet" type="text/css">
+<link href="index_files/css_002.css" rel="stylesheet" type="text/css">
+<link href="index_files/css.css" rel="stylesheet" type="text/css">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Salary Analysis</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
+    	<input type="text" name="experience" placeholder="Experience" required="required">
+        <input type="text" name="test_score" placeholder="Test Score" required="required">
+		<input type="text" name="interview_score" placeholder="Interview Score" required="required">
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ pred_text }}
+
+ </div>
+
+
+
+
+</body></html>
